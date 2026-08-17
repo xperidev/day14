@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 14 — your MVP, live in 14 days</title>
+<meta name="description" content="Day 14 is a UK studio that ships your production MVP in 14 days, fixed price and fixed scope. If it isn't live on day 14, you don't pay the balance.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111114'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='800' fill='%23ffd52e' text-anchor='middle'%3E14%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #111114;
+    --panel: #1a1a1f;
+    --ink: #f4f4f2;
+    --muted: #a3a3ad;
+    --accent: #ffd52e;
+    --line: #2a2a31;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-weight: 800; font-size: 1.15rem; letter-spacing: 0.02em; }
+  .logo span { color: var(--accent); }
+  .cta-mini {
+    color: var(--bg); background: var(--accent); text-decoration: none; font-weight: 700;
+    padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+  }
+  .hero { padding: 72px 0 48px; }
+  .hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; }
+  .hero h1 em { color: var(--accent); font-style: normal; }
+  .hero p.sub { margin-top: 22px; font-size: 1.2rem; color: var(--muted); max-width: 620px; }
+  .guarantee {
+    margin-top: 30px; display: inline-block; border: 1px solid var(--accent); border-radius: 10px;
+    padding: 14px 20px; font-weight: 700; font-size: 1.05rem;
+  }
+  .ticks { display: flex; gap: 6px; margin-top: 40px; max-width: 620px; }
+  .ticks i { flex: 1; height: 8px; border-radius: 4px; background: var(--line); }
+  .ticks i.on { background: var(--accent); }
+  .ticks-label { display: flex; justify-content: space-between; max-width: 620px; margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.01em; }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+  .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .card h3 .day { color: var(--accent); font-weight: 800; }
+  .card p { color: var(--muted); font-size: 0.97rem; }
+  .price { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .price .amount { font-size: clamp(2.4rem, 5vw, 3.4rem); font-weight: 800; color: var(--accent); }
+  .price .terms { color: var(--muted); }
+  ul.includes { list-style: none; margin-top: 20px; }
+  ul.includes li { padding: 8px 0 8px 30px; position: relative; color: var(--ink); }
+  ul.includes li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+  .fine { margin-top: 18px; color: var(--muted); font-size: 0.9rem; max-width: 640px; }
+  .big-cta { text-align: center; padding: 72px 0; }
+  .big-cta a {
+    display: inline-block; background: var(--accent); color: var(--bg); text-decoration: none;
+    font-weight: 800; font-size: 1.2rem; padding: 18px 36px; border-radius: 12px;
+  }
+  .big-cta p { margin-top: 16px; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 0.9rem; }
+  a.plain { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">DAY <span>14</span></div>
+    <a class="cta-mini" href="mailto:hello@day14.dev?subject=Scope%20call">Book a scope call</a>
+  </header>
+
+  <div class="hero">
+    <h1>Your MVP.<br>Live in <em>14 days</em>.<br>Or you don't pay the balance.</h1>
+    <p class="sub">Day 14 is a UK studio with one offer: idea to production-grade product in two weeks. Fixed price. Fixed scope. A real launch date instead of a quote and a shrug.</p>
+    <div class="guarantee">If it isn't live on day 14, the balance is waived. That's the deal.</div>
+    <div class="ticks" aria-hidden="true">
+      <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+    </div>
+    <div class="ticks-label"><span>Day 1 — scope locked</span><span>Day 14 — you're live</span></div>
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="cols">
+      <div class="card">
+        <h3><span class="day">Day 0</span> — Scope call</h3>
+        <p>We define the one core loop your product must nail. Scope is written down, signed, and frozen. That's what makes the date real.</p>
+      </div>
+      <div class="card">
+        <h3><span class="day">Days 1–13</span> — The build</h3>
+        <p>Auth, payments, data, deployment — production parts, not prototype glue. You see progress as it happens, not at the end.</p>
+      </div>
+      <div class="card">
+        <h3><span class="day">Day 14</span> — You're live</h3>
+        <p>Deployed, on your accounts, code in your repo. Handover call included. Change requests become the next sprint, not scope creep.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>One price</h2>
+    <div class="price">
+      <div class="amount">£9,950</div>
+      <div class="terms">fixed · 50% to start, balance on launch</div>
+    </div>
+    <ul class="includes">
+      <li>Production web app: authentication, payments, database, hosting — live on your own accounts</li>
+      <li>Fixed scope agreed and signed before any money moves</li>
+      <li>Your code, your repo, your infrastructure — no lock-in</li>
+      <li>30 days of bug fixes after launch, included</li>
+    </ul>
+    <p class="fine">Integration-heavy or AI-heavy builds are quoted at the scope call. Ongoing iteration and care plans available after launch.</p>
+  </section>
+
+  <section>
+    <h2>Who it's for</h2>
+    <div class="cols">
+      <div class="card">
+        <h3>Funded, not technical</h3>
+        <p>You've raised or committed your own capital and need the product real — not another deck, not a no-code toy.</p>
+      </div>
+      <div class="card">
+        <h3>Stuck at 80%</h3>
+        <p>An AI app builder or a freelancer got you something that demos but won't survive real users. We rebuild it properly.</p>
+      </div>
+      <div class="card">
+        <h3>Racing a window</h3>
+        <p>The opportunity has a date on it. You need a team that treats your deadline like a contract — because with us it is one.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="big-cta">
+    <a href="mailto:hello@day14.dev?subject=Scope%20call">Book your scope call</a>
+    <p>hello@day14.dev — replies same working day</p>
+  </div>
+
+  <footer>
+    <div>DAY 14 — a UK product studio. Built fast, built properly.</div>
+  </footer>
+</div>
+</body>
+</html>
